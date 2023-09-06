@@ -217,6 +217,10 @@ span {
     position: initial;
   }
   .aboutme {
-    right: 30vw;
+    left: 30px;
+    width: fit-content;
+  }
+  .div-redes {
+    top: 90px;
   }
 }
