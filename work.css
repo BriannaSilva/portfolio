@@ -216,4 +216,7 @@ span {
     margin-left: 2vw;
     position: initial;
   }
+  .aboutme {
+    right: 30vw;
+  }
 }
