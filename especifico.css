@@ -38,17 +38,22 @@ h3 {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     font-weight: 700;
-    text-align: center;
-    color: #684551;
+    color: #074024;
     padding-bottom: 10px;
 }
 
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #074024;
+    padding-top: 10px;
+}
 p {
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    text-align: center;
-    color: #684551;
+    color: #074024;
     padding-top: 10px;
 }
 
