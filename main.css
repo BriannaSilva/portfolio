@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+  --naranja: #e07a5f;
+  --verde: #81b29a;
+  --fondo: #f4f1de;
+  --eggplant: #684551;
+  --carbon: #424651;
+}
+
+
+
+/* Links */
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+
+.body-work {
+   background-color: #f4f1de;
+}
+
+body a {
+   color: black;
+}
+
+.text {
+   font-family: 'PT Mono', monospace;
+   font-size: 2rem;
+   color: #e07a5f;
+   cursor: pointer;
+}
+
+.link {
+   font-family: 'Oswald', sans-serif;
+   font-size: 8rem;
+   font-weight: 700;
+   text-align: right;
+   cursor: pointer;
+   color: #81b29a;
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke: 1px;
+   transition: all 0.3s ease;
+   padding-right: 10px;
+}
+
+
+/* NAV */
+
+
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  width: 100vh;
+  bottom: 0;
+  right: 6.6vw;
+  /* line-height: 2em; */
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+ /* MAIL */
+
+ .wrapper {
+   top: 70vh;
+   position: absolute;
+   right: 5vw;
+   color: #e07a5f;
+   z-index: 4;
+   background-color: #f4f1de;
+ }
+ 
+ .wrapper .button-mail {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+   overflow: hidden;
+   transition: all 0.3s ease-out;
+ }
+ 
+ .wrapper .button-mail:hover {
+   width: 350px;
+ }
+ .wrapper .button-mail .icon-mail {
+   box-sizing: border-box;
+   transition: all 0.3s ease-out;
+   margin: 2px;
+ }
+ .wrapper .button-mail .icon-mail i {
+   font-size: 2.5rem;
+   line-height: 60px;
+   transition: all 0.3s ease-out;
+ }
+ .wrapper .button-mail span {
+   font-size: 2rem;
+   margin-right: 6px;
+   transition: all 0.3s ease-out;
+ }
+ 
+ 
+ @media (max-width: 1024px) {
+  .text {
+    font-size: 2rem;
+  }
+  .link {
+    font-size: 5rem;
+  }
+ }
+
+ @media (max-width: 400px) {
+   .wrapper .button-mail {
+    width: 20px;
+  }
+  .wrapper .button-mail .icon-mail i {
+     font-size: 1.8rem;
+  }
+  .wrapper .button-mail span {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
+  .link {
+    font-size: 5rem;
+  }
+ }

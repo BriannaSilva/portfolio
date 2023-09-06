@@ -1,0 +1,59 @@
+
+ body {
+    height: 100vh;
+  }
+ 
+  section {
+    height: 100vh;
+    padding: 3em;
+  }
+ 
+  .overlay {
+    background-color:  #fff0f3;
+    color:  #f2cc8f ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    clip-path: circle(20% at var(--x, 50%) var(--y, 50%));
+    transition: clip-path 50ms;
+    z-index: 1000;
+  }
+  .overlay a {
+    color: #f2cc8f;
+  }
+ .section-1 {
+    background-color: #84a59d;
+    color: aliceblue;
+ }
+  .nombre {
+    font-family: "Oswald", sans-serif;
+    font-size: 10rem;
+    text-align: left;
+    font-weight: 600;
+ }
+ .carrot {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    transform: rotate(225deg);
+    cursor: pointer;
+ }
+ .div-home {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+ }
+ 
+ .is-open {
+    clip-path: circle(200% at 100% 100%);
+    transition: clip-path 0.2s;
+    transition-timing-function:cubic-bezier(1,-0.01, .01, .99);
+ }
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="section-1">
+        <div class="div-home">
+            <h1 class="nombre">BRIANNA SILVA</h1>
+            <span class="hover-btn"><i class="fa-solid fa-carrot carrot"></i></span>
+        </div>
+    </section>
+    <section class="overlay">
+        <div class="div-home">
+            <h1 class="nombre">BRIANNA SILVA</h1>
+            <span class="hover-btn2"><a href="./graphic.html"><i class="fa-solid fa-carrot carrot"></i></a></span>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const span = document.querySelector(".hover-btn2")
+        const overlay = document.querySelector(".overlay")
+
+        window.addEventListener("mousemove", (e) => {
+            const { clientX, clientY } = e; 
+            const x = Math.round((clientX / window.innerWidth) * 100);
+            const y = Math.round((clientY / window.innerHeight) * 100);
+
+            gsap.to(overlay, {
+                "--x": `${x}%`,
+                "--y": `${y}%`,
+                duration: 0.3,
+                ease: "sine.out"
+            })
+        })
+
+        span.addEventListener("click", () => {
+            overlay.classList.toggle("is-open")
+        })
+    </script>
+
+
+</body>
+</html>
