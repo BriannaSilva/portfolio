@@ -99,7 +99,6 @@ body a {
    overflow: hidden;
    transition: all 0.3s ease-out;
  }
- 
  .wrapper .button-mail:hover {
    width: 350px;
  }
