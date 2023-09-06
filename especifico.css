@@ -62,7 +62,6 @@ p {
     position: absolute;
     top: 15px;
     right: 0;
-
 }
 .project-tabs-list {
     display: grid;
@@ -110,5 +109,7 @@ p {
     .ejemplo {
         max-width: 80vw;
     }
-    
+    .project-tabs {
+        max-width: 85vw;
+    }
 }
