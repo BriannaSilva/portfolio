@@ -83,7 +83,11 @@ p {
     text-align: start;
 }
 
-
+.especificos p a {
+    text-transform: uppercase;
+    color: #074024;
+    font-weight: 600;
+}
 
 @media (max-width: 1024px) {
     .stickers img {
