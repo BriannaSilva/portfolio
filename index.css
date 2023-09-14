@@ -26,6 +26,23 @@
     background-color: #84a59d;
     color: aliceblue;
  }
+
+ .overlay .button-index {
+   padding: 8px 16px;
+   font-size: 1.5rem;
+   background-color: #f2cc8f;
+   color: #fff0f3;
+   font-family: "Oswald", sans-serif;
+   border-radius: 15px;
+ }
+ .section-1 .button-index{
+   padding: 8px 16px;
+   font-size: 1.5rem;
+   background-color: aliceblue;
+   color: #84a59d;;
+   font-family: "Oswald", sans-serif;
+   border-radius: 15px;
+ }
   .nombre {
     font-family: "Oswald", sans-serif;
     font-size: 10rem;
