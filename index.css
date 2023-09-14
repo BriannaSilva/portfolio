@@ -27,22 +27,22 @@ section {
    color: aliceblue;
 }
 
- .overlay .button-index {
+.overlay .button-index {
    padding: 8px 16px;
    font-size: 1.5rem;
    background-color: #f2cc8f;
    color: #fff0f3;
    font-family: "Oswald", sans-serif;
    border-radius: 15px;
- }
- .section-1 .button-index{
+}
+.section-1 .button-index{
    padding: 8px 16px;
    font-size: 1.5rem;
    background-color: aliceblue;
    color: #84a59d;;
    font-family: "Oswald", sans-serif;
    border-radius: 15px;
- }
+}
 .nombre {
    font-family: "Oswald", sans-serif;
    font-size: 10rem;
@@ -50,41 +50,41 @@ section {
    font-weight: 600;
    margin-bottom: 20px;
 }
- .carrot {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 20px;
-    -webkit-transform: rotate(225deg);
-    -moz-transform: rotate(225deg);
-    -ms-transform: rotate(225deg);
-    -o-transform: rotate(225deg);
-    transform: rotate(225deg);
-    cursor: pointer;
- }
- .div-home {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 8;
- }
+.carrot {
+   font-size: 3rem;
+   text-align: center;
+   margin-top: 20px;
+   -webkit-transform: rotate(225deg);
+   -moz-transform: rotate(225deg);
+   -ms-transform: rotate(225deg);
+   -o-transform: rotate(225deg);
+   transform: rotate(225deg);
+   cursor: pointer;
+}
+.div-home {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 8;
+}
  
- .is-open {
-    clip-path: circle(200% at 100% 100%);
-    transition: clip-path 0.2s;
-    transition-timing-function:cubic-bezier(1,-0.01, .01, .99);
- }
+.is-open {
+   clip-path: circle(200% at 100% 100%);
+   transition: clip-path 0.2s;
+   transition-timing-function:cubic-bezier(1,-0.01, .01, .99);
+}
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
    .nombre {
       font-size: 5rem;
    }
    .overlay .button-index {
       padding: 4px 8px;
       font-size: 1rem;
-    }
+   }
     .section-1 .button-index{
       padding: 4px 8px;
       font-size: 1rem;
-    }
- }
+   }
+}
