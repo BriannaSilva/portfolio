@@ -90,9 +90,9 @@ p {
 }
 
 @media (max-width: 1024px) {
-    .stickers img {
+    /* .stickers img {
         max-width: 50vw;
-    }
+    } */
 }
 @media /* only screen and */ (max-width: 768px) {
     .imagenes_ejemplos {
@@ -104,16 +104,18 @@ p {
         text-align: justify;
     }
     .especificos {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 10px;
+        display: flex;
         max-width: 90vw;
         padding: 0px 5px;
+        flex-direction: column;
     }
     .ejemplo {
         max-width: 80vw;
     }
     .project-tabs {
         max-width: 85vw;
+    }
+    h3, h1 {
+        max-width: 80vw;
     }
 }
