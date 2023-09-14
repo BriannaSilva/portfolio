@@ -43,16 +43,16 @@ body a {
 }
 
 .link {
-   font-family: 'Oswald', sans-serif;
-   font-size: 8rem;
-   font-weight: 700;
-   text-align: right;
-   cursor: pointer;
-   color: #81b29a;
-   -webkit-text-fill-color: transparent;
-   -webkit-text-stroke: 1px;
-   transition: all 0.3s ease;
-   padding-right: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  text-align: right;
+  cursor: pointer;
+  color: #81b29a;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+  transition: all 0.3s ease;
+  padding-right: 10px;
 }
 
 
@@ -143,5 +143,7 @@ body a {
   }
   .link {
     font-size: 5rem;
+    color: #81b29a;
+   -webkit-text-fill-color: #81b29a;
   }
  }
