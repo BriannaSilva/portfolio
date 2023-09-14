@@ -57,3 +57,8 @@
     transition-timing-function:cubic-bezier(1,-0.01, .01, .99);
  }
 
+ @media (max-width: 768px) {
+   .nombre {
+      font-size: 5rem;
+   }
+ }
