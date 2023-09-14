@@ -142,7 +142,7 @@
 
 .web-list img {
   max-width: 25vw;
-  background-color: white;
+  /* background-color: white; */
   padding: 7px;
   border-radius: 5px;
 }
