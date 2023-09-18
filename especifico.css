@@ -87,6 +87,7 @@ p {
     text-transform: uppercase;
     color: #074024;
     font-weight: 600;
+    text-decoration: underline;
 }
 
 @media (max-width: 1024px) {

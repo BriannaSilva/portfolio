@@ -19,12 +19,13 @@
 
 .div-redes {
   display: inline-flex;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   place-items: center;
   position: absolute;
   justify-content: center;
-  top: 20px;
+  /* top: 20px; */
+  margin-top: 20vh;
 }
 
 .div-redes .icon-redes {
@@ -222,5 +223,6 @@ span {
   }
   .div-redes {
     top: 90px;
+    margin-top: 35vh;
   }
 }

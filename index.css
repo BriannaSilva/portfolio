@@ -52,7 +52,7 @@ section {
    font-weight: 600;
    margin-bottom: 20px;
 }
-.carrot {
+/* .carrot {
    font-size: 3rem;
    text-align: center;
    margin-top: 20px;
@@ -62,7 +62,7 @@ section {
    -o-transform: rotate(225deg);
    transform: rotate(225deg);
    cursor: pointer;
-}
+} */
 .div-home {
    position: fixed;
    top: 50%;
