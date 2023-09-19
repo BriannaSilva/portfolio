@@ -19,12 +19,10 @@
 
 .div-redes {
   display: inline-flex;
-  /* height: 100%; */
   width: 100%;
   place-items: center;
   position: absolute;
   justify-content: center;
-  /* top: 20px; */
   margin-top: 20vh;
 }
 
@@ -42,7 +40,7 @@
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.div-redes .icon-redes span {
+.div-redes .icon-redes a {
   position: relative;
   height: 60px;
   width: 60px;
@@ -54,9 +52,10 @@
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.div-redes .icon-redes span i {
+.div-redes .icon-redes a i {
   font-size: 2rem;
   line-height: 60px;
+  color: #81b29a;
 }
 .div-redes .icon-redes .tooltip {
   position: absolute;
@@ -143,7 +142,6 @@
 
 .web-list img {
   max-width: 25vw;
-  /* background-color: white; */
   padding: 7px;
   border-radius: 5px;
 }
