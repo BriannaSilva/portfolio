@@ -56,6 +56,7 @@ p {
     color: #074024;
     padding-top: 10px;
     text-align: justify;
+    margin-bottom: 5px;
 }
 
 .project-tabs {
@@ -84,10 +85,17 @@ p {
 }
 
 .especificos p a {
-    text-transform: uppercase;
-    color: #074024;
+    padding: 8px 10px;
+    font-size: 1.5rem;
     font-weight: 600;
-    text-decoration: underline;
+    background-color: #e07a5f;
+    color: antiquewhite;
+    font-family: "Oswald", sans-serif;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.especificos p a:hover {
+    background-color: #074024;
 }
 
 @media (max-width: 1024px) {
