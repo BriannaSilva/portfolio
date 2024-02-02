@@ -38,14 +38,50 @@
         const span = document.querySelector(".hover-btn2")
         const overlay = document.querySelector(".overlay")
 
-        window.addEventListener("mousemove", (e) => {
-            const { clientX, clientY } = e; 
-            const x = Math.round((clientX / window.innerWidth) * 100);
-            const y = Math.round((clientY / window.innerHeight) * 100);
+        let control = "automover";
+
+        const speed = 20;
+
+        let xdirection = speed;
+        let ydirection = speed;
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 768)
+                activarAutomover();
+            else
+                activarControlDeMouse();
+        });
+
+        setInterval(() => {
+            if (control !== "automover")
+                return;
+
+            const x = Number(overlay.style.getPropertyValue("--x").replace("px", ""));
+            const y = Number(overlay.style.getPropertyValue("--y").replace("px", ""));
+
+            if (x > window.innerWidth || x < 0)
+                xdirection *= -1;
+            
+            if (y > window.innerHeight || y < 0)
+                ydirection *= -1;
 
             gsap.to(overlay, {
-                "--x": `${x}%`,
-                "--y": `${y}%`,
+                "--x": `${x + xdirection}px`,
+                "--y": `${y + ydirection}px`,
+                duration: 0.1,
+                ease: "sine.out"
+            })
+        }, 100);
+        
+        window.addEventListener("mousemove", (e) => {
+            if (control !== "mouse")
+                return;
+        
+            const { clientX, clientY } = e; 
+    
+            gsap.to(overlay, {
+                "--x": `${clientX}px`,
+                "--y": `${clientY}px`,
                 duration: 0.3,
                 ease: "sine.out"
             })
@@ -54,6 +90,14 @@
         span.addEventListener("click", () => {
             overlay.classList.toggle("is-open")
         })
+
+        function activarAutomover() {
+            control = "automover"
+        }
+        
+        function activarControlDeMouse() {
+            control = "mouse"
+        }
     </script>
 
 
