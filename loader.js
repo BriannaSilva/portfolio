@@ -23,7 +23,16 @@ const tabs = construct(`
     </div>
 `);
 
-body.prepend(nav,tabs);
+const email = construct(`
+    <div class="wrapper">
+        <div class="button-mail">
+            <div class="icon-mail"><i class="fa-regular fa-envelope"></i></div>
+            <span class="text web-mail"><a href="mailto:brianna.designwork@gmail.com" style="color: #e07a5f;">BRIANNA.DESIGNWORK@GMAIL.COM</a></span>
+        </div>
+    </div>
+`);
+
+body.prepend(nav,tabs,email);
 
 function construct(htmlString) {
     parser = new DOMParser();
