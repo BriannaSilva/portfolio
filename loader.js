@@ -15,10 +15,10 @@ const nav = construct(`
 const tabs = construct(`
     <div class="project-tabs">
         <ul class="project-tabs-list">
-            <li><a class="text" href="./ux-ui.html">UX/UI</a></li>
-            <li><a class="text" href="./graphic.html">GRAPHIC DESIGN</a></li>
-            <li><a class="text" href="./illustrations.html">ILLUSTRATIONS</a></li>
             <li><a class="text" href="./art.html">ART</a></li>
+            <li><a class="text" href="./ux-ui.html">UX/UI</a></li>
+            <li><a class="text" href="./graphic.html">GRAPHIC</a></li>
+            <li><a class="text" href="./illustrations.html">ILLUSTRATIONS</a></li>
         </ul>
     </div>
 `);
