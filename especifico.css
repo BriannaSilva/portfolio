@@ -109,21 +109,35 @@ p {
         right: 0;
     }
     p {
-        max-width: 80vw;
+        max-width: 80%;
         margin-right: 5vw;
         text-align: justify;
     }
     .especificos {
         display: flex;
-        max-width: 90vw;
+        max-width: 90%;
         padding: 0px 5px;
         flex-direction: column;
+        margin: 24px 12px;
     }
     .ejemplo {
         max-width: 80vw;
     }
-    .project-tabs {
-        max-width: 85vw;
+    .project-tabs{
+        position: sticky;
+        width: 90%;
+        background-color: var(#f4f1de);
+        padding: 14px;
+        margin-left: 0;
+    }
+    .project-tabs-list{
+        width: 100%;
+        display: flex;
+        gap: 24px;
+        top: 0;
+    }
+    .nav {
+        margin-right: 20px;
     }
     h3, h1 {
         max-width: 80vw;

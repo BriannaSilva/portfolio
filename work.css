@@ -198,10 +198,17 @@ span {
     top: 0;
   }
   .project-tabs-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display: flex;
+    gap: 24px;
     justify-items: center;
+  }
+  .project-tabs
+  {
+    position: sticky;
+    width: 90%;
+    background-color: var(#f4f1de);
+    padding: 24px;
+    max-width: 50%;
   }
   .project-tabs-list > li {
     flex: 1;
@@ -222,5 +229,29 @@ span {
   .div-redes {
     top: 90px;
     margin-top: 35vh;
+  }
+  @media (max-width: 480px)
+  {
+    .web{
+      height: 100%;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .project-tabs{
+      position: sticky;
+      width: 90%;
+      background-color: var(#f4f1de);
+      padding: 14px;
+      margin-left: 0;
+    }
+    .project-tabs-list{
+      width: 100%;
+      display: flex;
+      gap: 24px;
+      top: 0;
+    }
+    .nav {
+      margin-right: 20px;
+    }
   }
 }
