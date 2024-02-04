@@ -233,7 +233,6 @@ span {
   @media (max-width: 480px)
   {
     .web{
-      height: 100%;
       margin-top: 20px;
       margin-bottom: 0;
     }
