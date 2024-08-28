@@ -70,6 +70,8 @@ p {
     gap: 10px;
     justify-items: center;
     width: 700px;
+    position: absolute;
+    right: 6.6vw;
 }
 
 
