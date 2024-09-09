@@ -128,15 +128,19 @@ p {
     .project-tabs{
         position: sticky;
         width: 90%;
-        background-color: var(#f4f1de);
+        background-color: #f4f1de;
         padding: 14px;
         margin-left: 0;
+        padding-top: 20px;
+        top: 0;
     }
     .project-tabs-list{
         width: 100%;
         display: flex;
         gap: 24px;
-        top: 0;
+        top: 15px;
+        right: 0;
+        left: 20px;
     }
     .nav {
         margin-right: 20px;
