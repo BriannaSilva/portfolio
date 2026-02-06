@@ -22,13 +22,13 @@
     <section class="section-1">
         <div class="div-home">
             <h1 class="nombre">BRIANNA SILVA</h1>
-            <span class="hover-btn"><a href="./graphic.html" class="button-index">Press me</a></span>
+            <span class="hover-btn"><a href="./main.html" class="button-index">Press me</a></span>
         </div>
     </section>
     <section class="overlay">
         <div class="div-home">
             <h1 class="nombre">BRIANNA SILVA</h1>
-            <span class="hover-btn2"><a href="./graphic.html" class="button-index">Press me</a></span>
+            <span class="hover-btn2"><a href="./main.html" class="button-index">Press me</a></span>
         </div>
     </section>
 
@@ -37,13 +37,22 @@
     <script>
         const span = document.querySelector(".hover-btn2")
         const overlay = document.querySelector(".overlay")
-
-        let control = "automover";
-
-        const speed = 20;
-
+        let control;
+        const speed = 30;
         let xdirection = speed;
         let ydirection = speed;
+
+        // Initialize control based on screen size on page load
+        function initializeControl() {
+            if (window.innerWidth < 768) {
+                control = "automover";
+            } else {
+                control = "mouse";
+            }
+        }
+
+        // Call initialization on page load
+        initializeControl();
 
         window.addEventListener("resize", () => {
             if (window.innerWidth < 768)
@@ -55,16 +64,14 @@
         setInterval(() => {
             if (control !== "automover")
                 return;
-
-            const x = Number(overlay.style.getPropertyValue("--x").replace("px", ""));
-            const y = Number(overlay.style.getPropertyValue("--y").replace("px", ""));
-
+            const x = Number(overlay.style.getPropertyValue("--x").replace("px", "")) || window.innerWidth / 2;
+            const y = Number(overlay.style.getPropertyValue("--y").replace("px", "")) || window.innerHeight / 2;
+            
             if (x > window.innerWidth || x < 0)
                 xdirection *= -1;
             
             if (y > window.innerHeight || y < 0)
                 ydirection *= -1;
-
             gsap.to(overlay, {
                 "--x": `${x + xdirection}px`,
                 "--y": `${y + ydirection}px`,
@@ -72,13 +79,13 @@
                 ease: "sine.out"
             })
         }, 100);
-        
+
         window.addEventListener("mousemove", (e) => {
             if (control !== "mouse")
                 return;
-        
+
             const { clientX, clientY } = e; 
-    
+
             gsap.to(overlay, {
                 "--x": `${clientX}px`,
                 "--y": `${clientY}px`,
@@ -94,7 +101,7 @@
         function activarAutomover() {
             control = "automover"
         }
-        
+
         function activarControlDeMouse() {
             control = "mouse"
         }
