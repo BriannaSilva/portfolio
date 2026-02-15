@@ -1,0 +1,37 @@
+.line__pulse
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+}
+
+.line
+{
+    height: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(136, 231, 136, 0.5);
+}
+
+.dot {
+    animation: move 3s infinite;
+    width: 10px;
+    background-color: #88e788;
+    height: 8px;
+    width: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+@keyframes move {
+    0% {
+        /* box-shadow: 0 0 0 0px rgba(136, 231, 136, 0.2); */
+        left: 0%;
+    }
+    100% {
+        /* box-shadow: 0 0 0 15px rgba(136, 231, 136, 0.4); */
+        left: 100%;
+    }
+}

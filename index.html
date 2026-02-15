@@ -1,112 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1DP5SDV1TY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" type="image/x-icon" href="./Assets/favicon/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-1DP5SDV1TY"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-1DP5SDV1TY');
-</script>
-<body>
+    gtag("config", "G-1DP5SDV1TY");
+  </script>
+  <body>
     <section class="section-1">
-        <div class="div-home">
-            <h1 class="nombre">BRIANNA SILVA</h1>
-            <span class="hover-btn"><a href="./main.html" class="button-index">Press me</a></span>
-        </div>
+      <div class="div-home">
+        <h1 class="nombre">BRIANNA SILVA</h1>
+        <span class="hover-btn"
+          ><a href="./main.html" class="button-index">Press me</a></span
+        >
+      </div>
     </section>
     <section class="overlay">
-        <div class="div-home">
-            <h1 class="nombre">BRIANNA SILVA</h1>
-            <span class="hover-btn2"><a href="./main.html" class="button-index">Press me</a></span>
-        </div>
+      <div class="div-home">
+        <h1 class="nombre">BRIANNA SILVA</h1>
+        <span class="hover-btn2"
+          ><a href="./main.html" class="button-index">Press me</a></span
+        >
+      </div>
     </section>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
-        const span = document.querySelector(".hover-btn2")
-        const overlay = document.querySelector(".overlay")
-        let control;
-        const speed = 30;
-        let xdirection = speed;
-        let ydirection = speed;
+      const span = document.querySelector(".hover-btn2");
+      const overlay = document.querySelector(".overlay");
+      let control;
+      const speed = 30;
+      let xdirection = speed;
+      let ydirection = speed;
 
-        // Initialize control based on screen size on page load
-        function initializeControl() {
-            if (window.innerWidth < 768) {
-                control = "automover";
-            } else {
-                control = "mouse";
-            }
+      // Initialize control based on screen size on page load
+      function initializeControl() {
+        if (window.innerWidth < 768) {
+          control = "automover";
+        } else {
+          control = "mouse";
         }
+      }
 
-        // Call initialization on page load
-        initializeControl();
+      // Call initialization on page load
+      initializeControl();
 
-        window.addEventListener("resize", () => {
-            if (window.innerWidth < 768)
-                activarAutomover();
-            else
-                activarControlDeMouse();
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 768) activarAutomover();
+        else activarControlDeMouse();
+      });
+
+      setInterval(() => {
+        if (control !== "automover") return;
+        const x =
+          Number(overlay.style.getPropertyValue("--x").replace("px", "")) ||
+          window.innerWidth / 2;
+        const y =
+          Number(overlay.style.getPropertyValue("--y").replace("px", "")) ||
+          window.innerHeight / 2;
+
+        if (x > window.innerWidth || x < 0) xdirection *= -1;
+
+        if (y > window.innerHeight || y < 0) ydirection *= -1;
+        gsap.to(overlay, {
+          "--x": `${x + xdirection}px`,
+          "--y": `${y + ydirection}px`,
+          duration: 0.1,
+          ease: "sine.out",
         });
+      }, 100);
 
-        setInterval(() => {
-            if (control !== "automover")
-                return;
-            const x = Number(overlay.style.getPropertyValue("--x").replace("px", "")) || window.innerWidth / 2;
-            const y = Number(overlay.style.getPropertyValue("--y").replace("px", "")) || window.innerHeight / 2;
-            
-            if (x > window.innerWidth || x < 0)
-                xdirection *= -1;
-            
-            if (y > window.innerHeight || y < 0)
-                ydirection *= -1;
-            gsap.to(overlay, {
-                "--x": `${x + xdirection}px`,
-                "--y": `${y + ydirection}px`,
-                duration: 0.1,
-                ease: "sine.out"
-            })
-        }, 100);
+      window.addEventListener("mousemove", (e) => {
+        if (control !== "mouse") return;
 
-        window.addEventListener("mousemove", (e) => {
-            if (control !== "mouse")
-                return;
+        const { clientX, clientY } = e;
 
-            const { clientX, clientY } = e; 
+        gsap.to(overlay, {
+          "--x": `${clientX}px`,
+          "--y": `${clientY}px`,
+          duration: 0.3,
+          ease: "sine.out",
+        });
+      });
 
-            gsap.to(overlay, {
-                "--x": `${clientX}px`,
-                "--y": `${clientY}px`,
-                duration: 0.3,
-                ease: "sine.out"
-            })
-        })
+      span.addEventListener("click", () => {
+        overlay.classList.toggle("is-open");
+      });
 
-        span.addEventListener("click", () => {
-            overlay.classList.toggle("is-open")
-        })
+      function activarAutomover() {
+        control = "automover";
+      }
 
-        function activarAutomover() {
-            control = "automover"
-        }
-
-        function activarControlDeMouse() {
-            control = "mouse"
-        }
+      function activarControlDeMouse() {
+        control = "mouse";
+      }
     </script>
-
-
-</body>
+  </body>
 </html>
